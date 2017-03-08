@@ -1,13 +1,21 @@
 ---
 layout: post
-title:  "The Galileo Theme"
-date:   2015-11-15 13:05:14 +0100
+title:  "单例模式-懒汉和饿汉"
+date:   2017-3-5 13:05:14 +0100
 categories: jekyll theme
-location: Florence, Italy
-description: Galileo theme presents your words & photographs in a handsome, agreeable manner.
----
----
-Landing somewhere between a scholarly publication and an adventurers notebook, the Galileo theme presents your words & photographs in a handsome, agreeable manner. It is well behaved on both mobile & desktop and radically minimal in its footprint. Charged and ready for deployment to Github Pages.
+单例模式是设计模式中比较简单的一种。适合于一个类只有一个实例的情况，比如窗口管理器，打印缓冲池和文件系统，
+它们都是原型的例子。典型的情况是，那些对象的类型被遍及一个软件系统的不同对象访问，因此需要一个全局的访问
+指针，这便是众所周知的单例模式的应用。当然这只有在你确信你不再需要任何多于一个的实例的情况下。 
+单例模式的用意在于前一段中所关心的。通过单例模式你可以： 
 
-Suitable for shortform, longform, and probably even waveform. It is purpose-built to accomodate photographic content wonderfully and lends itself well to journaling your sojourn.
+
+                     一、确保一个类只有一个实例被建立 
+                     二、提供了一个对对象的全局访问指针 
+                     三、在不影响单例类的客户端的情况下允许将来有多个实例
+
+经典的单例模式有三种，懒汉式、饿汉式和 登记式。
+
+懒汉式的特点是延迟加载，比如配置文件，采用懒汉式的方法，顾名思义，懒汉么，很懒的，配置文件的实例直到用到的
+时候才会加载。。。。。。
+饿汉式的特点是一开始就加载了，如果说懒汉式是“时间换空间”，那么饿汉式就是“空间换时间”，因为一开始就创建了实例，所以每次用到的之后直接返回就好了。
 
